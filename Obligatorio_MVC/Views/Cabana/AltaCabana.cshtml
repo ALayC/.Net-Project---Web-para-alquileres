@@ -1,0 +1,58 @@
+﻿@model IEnumerable<CabanaModel>
+
+@{
+    ViewData["Title"] = "AltaCabana";
+}
+
+<h1>AltaCabana</h1>
+
+<h4>Cabana</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+@*        <form asp-action="AltaCabana" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="JacuzziPrivado" /> @Html.DisplayNameFor(model => model.JacuzziPrivado)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="HabilitadaReservas" /> @Html.DisplayNameFor(model => model.HabilitadaReservas)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumeroHabitacion" class="control-label"></label>
+                <input asp-for="NumeroHabitacion" class="form-control" />
+                <span asp-validation-for="NumeroHabitacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CapacidadMaxima" class="control-label"></label>
+                <input asp-for="CapacidadMaxima" class="form-control" />
+                <span asp-validation-for="CapacidadMaxima" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="imagen" class="control-label"></label>
+                <input type="file" name="imagen" class="form-control" />
+                <span asp-validation="imagen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>*@
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

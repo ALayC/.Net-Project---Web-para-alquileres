@@ -1,0 +1,21 @@
+﻿@model Obligatorio_MVC.Models.LoginViewModel
+
+<h1>Iniciar sesión</h1>
+
+@if (ViewData["ErrorMessage"] != null)
+{
+    <p>@ViewData["ErrorMessage"]</p>
+}
+
+<form method="post" asp-action="Login">
+    <div>
+        <label for="Email">Correo electrónico:</label>
+        <input type="text" id="Email" name="Email" />
+    </div>
+    <div>
+        <label for="Password">Contraseña:</label>
+        <input type="password" id="Password" name="Password" />
+    </div>
+    <button type="submit">Iniciar sesión</button>
+</form>
+

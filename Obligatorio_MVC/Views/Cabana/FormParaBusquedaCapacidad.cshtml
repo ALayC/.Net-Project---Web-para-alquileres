@@ -1,0 +1,24 @@
+﻿@model Obligatorio_MVC.Models.ModelParaBusquedaCapacidad
+
+<h1>FormParaBuscarPorTipoyMonto</h1>
+
+<h4>CabanaModel</h4>
+<hr />
+<form method="post" asp-controller="Cabana" asp-action="BusquedaCapacidad">
+    <div class="form-group">
+        <label for="monto">min:</label>
+        <input type="number" name="min" class="form-control" placeholder="min">
+    </div>
+    <div class="form-group">
+        <label for="monto">max:</label>
+        <input type="number" name="max" class="form-control" placeholder="max">
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

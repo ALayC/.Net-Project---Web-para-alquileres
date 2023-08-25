@@ -1,0 +1,15 @@
+C:\Users\alay\source\repos\ObligatorioP3\Obligatorio_Aplicacion\bin\Debug\net7.0\Obligatorio_Aplicacion.deps.json
+C:\Users\alay\source\repos\ObligatorioP3\Obligatorio_Aplicacion\bin\Debug\net7.0\Obligatorio_Aplicacion.dll
+C:\Users\alay\source\repos\ObligatorioP3\Obligatorio_Aplicacion\bin\Debug\net7.0\Obligatorio_Aplicacion.pdb
+C:\Users\alay\source\repos\ObligatorioP3\Obligatorio_Aplicacion\bin\Debug\net7.0\Obligatorio_LogicaNegocio.dll
+C:\Users\alay\source\repos\ObligatorioP3\Obligatorio_Aplicacion\bin\Debug\net7.0\Obligatorio_LogicaNegocio.pdb
+C:\Users\alay\source\repos\ObligatorioP3\Obligatorio_Aplicacion\obj\Debug\net7.0\Obligatorio_Aplicacion.csproj.AssemblyReference.cache
+C:\Users\alay\source\repos\ObligatorioP3\Obligatorio_Aplicacion\obj\Debug\net7.0\Obligatorio_Aplicacion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alay\source\repos\ObligatorioP3\Obligatorio_Aplicacion\obj\Debug\net7.0\Obligatorio_Aplicacion.AssemblyInfoInputs.cache
+C:\Users\alay\source\repos\ObligatorioP3\Obligatorio_Aplicacion\obj\Debug\net7.0\Obligatorio_Aplicacion.AssemblyInfo.cs
+C:\Users\alay\source\repos\ObligatorioP3\Obligatorio_Aplicacion\obj\Debug\net7.0\Obligatorio_Aplicacion.csproj.CoreCompileInputs.cache
+C:\Users\alay\source\repos\ObligatorioP3\Obligatorio_Aplicacion\obj\Debug\net7.0\Obligatorio_Aplicacion.csproj.CopyComplete
+C:\Users\alay\source\repos\ObligatorioP3\Obligatorio_Aplicacion\obj\Debug\net7.0\Obligatorio_Aplicacion.dll
+C:\Users\alay\source\repos\ObligatorioP3\Obligatorio_Aplicacion\obj\Debug\net7.0\refint\Obligatorio_Aplicacion.dll
+C:\Users\alay\source\repos\ObligatorioP3\Obligatorio_Aplicacion\obj\Debug\net7.0\Obligatorio_Aplicacion.pdb
+C:\Users\alay\source\repos\ObligatorioP3\Obligatorio_Aplicacion\obj\Debug\net7.0\ref\Obligatorio_Aplicacion.dll

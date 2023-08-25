@@ -1,0 +1,52 @@
+﻿@model IEnumerable<MantenimientoModel>
+
+@{
+    ViewData["Title"] = "BuscarMantenimientoEntreFechas";
+}
+
+<h1>BuscarMantenimientoEntreFechas</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               Fecha
+            </th>
+            <th>
+                Costo
+            </th>
+            <th>
+                Trabajador
+            </th>
+            <th>
+                NumeroHabitacion
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Costo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Trabajador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroHabitacion)
+            </td>
+            <td>
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

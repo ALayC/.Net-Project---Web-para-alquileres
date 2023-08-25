@@ -1,0 +1,96 @@
+﻿@model IEnumerable<TipoCabanaModel>
+
+@{
+    ViewData["Title"] = "BuscarTipoCabana";
+}
+
+<h1>BuscarTipoCabana</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+@if (TempData.ContainsKey("ErrorEliminarTipoCabana"))
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["ErrorEliminarTipoCabana"]
+    </div>
+}
+
+
+<form asp-action="EliminacionPorTipo" method="post">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Descripcion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CostoPorHuesped)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdTipoCabana)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descripcion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CostoPorHuesped)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdTipoCabana)
+                    </td>
+                    <td>
+                        <input type="checkbox" name="selectedItems" value="@item.IdTipoCabana" />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+</form>
+
+<h2>Editar Tipo de Cabaña y Costo</h2>
+
+<form asp-action="EditarTipoYCosto" method="post">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdTipoCabana)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <input type="text" asp-for="@item.IdTipoCabana" />
+                    </td>
+                    <input type="hidden" name="idTipoCabana" value="@item.IdTipoCabana" />
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+        <label for="descripcion">Descripción Tipo Cabaña:</label>
+        <input type="text" name="descripcion" id="descripcion" />
+    </div>
+    <div>
+        <label for="costo">Costo por Huésped:</label>
+        <input type="number" name="costo" id="costo" />
+    </div>
+    <button type="submit">Guardar</button>
+</form>
+
+
+
+

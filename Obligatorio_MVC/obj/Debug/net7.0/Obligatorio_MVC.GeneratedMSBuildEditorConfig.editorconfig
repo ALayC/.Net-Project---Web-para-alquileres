@@ -1,0 +1,165 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Obligatorio_MVC
+build_property.RootNamespace = Obligatorio_MVC
+build_property.ProjectDir = C:\Users\alay\source\repos\ObligatorioP3\Obligatorio_MVC\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\alay\source\repos\ObligatorioP3\Obligatorio_MVC
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Cabana/AltaCabana.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5hXEFsdGFDYWJhbmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Cabana/BuscarCabanaPorCantidadMaximaDePersonas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5hXEJ1c2NhckNhYmFuYVBvckNhbnRpZGFkTWF4aW1hRGVQZXJzb25hcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Cabana/BuscarCabanaPorCantidadMaximaDePersonasPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5hXEJ1c2NhckNhYmFuYVBvckNhbnRpZGFkTWF4aW1hRGVQZXJzb25hc1Bvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Cabana/BuscarCabanaPorNombrePost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5hXEJ1c2NhckNhYmFuYVBvck5vbWJyZVBvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Cabana/BuscarCabanaPorTipo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5hXEJ1c2NhckNhYmFuYVBvclRpcG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Cabana/BuscarCabanaPorTipoPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5hXEJ1c2NhckNhYmFuYVBvclRpcG9Qb3N0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Cabana/BuscarCabanas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5hXEJ1c2NhckNhYmFuYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Cabana/BuscarCabanasHabilitadas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5hXEJ1c2NhckNhYmFuYXNIYWJpbGl0YWRhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Cabana/BuscarCabanasHabilitadasPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5hXEJ1c2NhckNhYmFuYXNIYWJpbGl0YWRhc1Bvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Cabana/BuscarPorTipoyMonto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5hXEJ1c2NhclBvclRpcG95TW9udG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Cabana/BuscarTodas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5hXEJ1c2NhclRvZGFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Cabana/BusquedaCapacidad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5hXEJ1c3F1ZWRhQ2FwYWNpZGFkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Cabana/FormParaBuscarPorTipoyMonto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5hXEZvcm1QYXJhQnVzY2FyUG9yVGlwb3lNb250by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Cabana/FormParaBusquedaCapacidad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5hXEZvcm1QYXJhQnVzcXVlZGFDYXBhY2lkYWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Cabana/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5hXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Cabana/ViewParaBusquedaCapacidad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5hXFZpZXdQYXJhQnVzcXVlZGFDYXBhY2lkYWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Home/BuscarTipoCabana.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCdXNjYXJUaXBvQ2FiYW5hLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Home/ListarTipoCabana.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMaXN0YXJUaXBvQ2FiYW5hLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Home/Registrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3RyYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Mantenimiento/BuscarMantenimientoEntreFechas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuaW1pZW50b1xCdXNjYXJNYW50ZW5pbWllbnRvRW50cmVGZWNoYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Mantenimiento/ListaBuscarMantenimientoEntreFechas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuaW1pZW50b1xMaXN0YUJ1c2Nhck1hbnRlbmltaWVudG9FbnRyZUZlY2hhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Mantenimiento/ListarRegistroMantenimiento.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuaW1pZW50b1xMaXN0YXJSZWdpc3Ryb01hbnRlbmltaWVudG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Mantenimiento/RegistroMantenimiento.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuaW1pZW50b1xSZWdpc3Ryb01hbnRlbmltaWVudG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/TipoCabana/Alta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0NhYmFuYVxBbHRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/TipoCabana/BuscarTipoPorNombre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0NhYmFuYVxCdXNjYXJUaXBvUG9yTm9tYnJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/TipoCabana/ListaBusquedaPorNombreDelTipo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0NhYmFuYVxMaXN0YUJ1c3F1ZWRhUG9yTm9tYnJlRGVsVGlwby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/TipoCabana/ListaDelaBusquedaPorNombre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0NhYmFuYVxMaXN0YURlbGFCdXNxdWVkYVBvck5vbWJyZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/TipoCabana/ListarTipoCabana.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0NhYmFuYVxMaXN0YXJUaXBvQ2FiYW5hLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Usuario/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xsb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alay/source/repos/ObligatorioP3/Obligatorio_MVC/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-nwgschoq5b

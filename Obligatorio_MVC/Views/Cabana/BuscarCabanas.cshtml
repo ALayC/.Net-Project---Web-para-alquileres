@@ -1,0 +1,47 @@
+﻿@model IEnumerable<CabanaModel>
+
+<form method="post" asp-action="BuscarCabanaPorNombrePost">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label for="nombre">Busqueda por Nombre:</label>
+        <input type="text" class="form-control" name="nombre" id="nombre" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+<form method="post" asp-action="BuscarCabanaPorTipoPost">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label for="nombre">Busqueda por Tipo:</label>
+        <input type="text" class="form-control" name="tipo" id="tipo" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+
+<form method="post" asp-action="BuscarCabanaPorCantidadMaximaDePersonasPost">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label for="nombre">Busqueda por cantidad maxima de personas:</label>
+        <input type="number" class="form-control" name="maxpersonas" id="maxpersonas" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+
+</form>
+
+<form method="post" asp-action="BuscarCabanasHabilitadasPost">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label for="nombre">Busqueda de  cabanas habilitadas:</label>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+
+</form>
+
+<form method="post" asp-action="BuscarTodas">
+    <div class="form-group">
+        <label for="nombre">Todas las cabanas:</label>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+
+</form>

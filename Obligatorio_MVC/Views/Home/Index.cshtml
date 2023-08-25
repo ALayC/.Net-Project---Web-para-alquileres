@@ -1,0 +1,50 @@
+﻿@model Obligatorio_MVC.Models.LogOutViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<form method="post" asp-action="Logout">
+    <button type="submit">Cerrar sesión</button>
+</form>
+<form method="post" asp-action="IngresarTipoCabana">
+    <button type="submit">Ingresar tipos de Cabana</button>
+</form>
+<form method="post" asp-action="ListarTipoCabana">
+    <button type="submit">Listar tipos de Cabana</button>
+</form>
+<form method="post" asp-action="IngresarCabana">
+    <button type="submit">Ingresar nueva Cabana</button>
+</form>
+<form method="post" asp-action="BusquedaCabana">
+    <button type="submit">Busqueda personalizada de cabanas</button>
+</form>
+<form method="post" asp-action="BusquedaMantenimientoEntreFechas">
+    <button type="submit">Busqueda de mantenimineto entre dos fechas</button>
+</form>
+<form method="post" asp-action="RegistroMantenimiento">
+    <button type="submit">Registrar mantenimiento</button>
+</form>
+<form method="post" asp-action="BuscarPorTipoyMonto">
+    <button type="submit">Buscar Por Tipo y Monto</button>
+</form>
+<form method="post" asp-action="BusquedaCapacidad">
+    <button type="submit">BusquedaCapacidad</button>
+</form>
+
+
+<form method="post" asp-action="BuscarTipoCabana">
+    <div class="form-group">
+        <label for="nombre">Busqueda por Tipo de cabana:</label>
+        <input type="text" class="form-control" name="nombre" id="nombre" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+
+
+<p>

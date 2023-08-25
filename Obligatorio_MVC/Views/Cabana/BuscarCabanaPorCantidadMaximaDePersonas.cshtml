@@ -1,0 +1,65 @@
+﻿@model IEnumerable<CabanaModel>
+
+@{
+    ViewData["Title"] = "BuscarCabanaPorCantidadMaximaDePersonas";
+}
+
+<h1>BuscarCabanaPorCantidadMaximaDePersonas</h1>
+@if (TempData.ContainsKey("ErrorBuscarCabanaNombre"))
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["ErrorBuscarCabanaNombre"]
+    </div>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JacuzziPrivado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HabilitadaReservas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroHabitacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CapacidadMaxima)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imagen)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JacuzziPrivado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HabilitadaReservas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroHabitacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CapacidadMaxima)
+            </td>
+            <td>
+
+                    <img class="img-thumbnail" src="~/imagenes/fotos/@item.Imagen" />
+            </td>
+
+        </tr>
+}
+    </tbody>
+</table>
