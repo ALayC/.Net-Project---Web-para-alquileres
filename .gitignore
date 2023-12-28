@@ -1,4 +1,5 @@
-﻿################################################################################
+
+################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
@@ -11,3 +12,27 @@
 /.gitignore
 /.vs/ProyectoAlquileres/v17/.suo
 
+*.vsidx
+*.1
+*.v2
+/.vs/ProyectoAlquileres/FileContentIndex/read.lock
+/ObligatorioP3/bin/Debug/net7.0/Obligatorio_LogicaNegocio.dll
+/ObligatorioP3/obj/Debug/net7.0/Obligatorio_LogicaNegocio.dll
+/ObligatorioP3/bin/Debug/net7.0/Obligatorio_LogicaNegocio.pdb
+
+
+# Ignore all .dll and .pdb files
+*.dll
+*.pdb
+/Web API/bin/Debug/net7.0/Obligatorio_AccesoDatos.dll
+/Web API/obj/Debug/net7.0/Web API.pdb
+/Web API/obj/Debug/net7.0/Web API.dll
+/Web API/bin/Debug/net7.0/Web API.pdb
+/Web API/bin/Debug/net7.0/Web API.dll
+/Web API/bin/Debug/net7.0/Obligatorio_LogicaNegocio.pdb
+/Web API/bin/Debug/net7.0/Obligatorio_LogicaNegocio.dll
+/Web API/bin/Debug/net7.0/Obligatorio_Aplicacion.pdb
+/Web API/bin/Debug/net7.0/Obligatorio_Aplicacion.dll
+/Web API/bin/Debug/net7.0/Obligatorio_AccesoDatos.pdb
+/Obligatorio_Aplicacion/obj/Debug/net7.0/Obligatorio_Aplicacion.pdb
+/Obligatorio_Aplicacion/obj/Debug/net7.0/Obligatorio_Aplicacion.dll

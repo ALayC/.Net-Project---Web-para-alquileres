@@ -109,7 +109,7 @@ namespace Web_API.Controllers
                     cabanasOrdenadas.Add(a);
                 }
             }
-            return cabanasFiltradas;
+            return cabanasOrdenadas;
         }
         
     }
