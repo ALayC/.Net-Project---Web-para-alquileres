@@ -1,0 +1,55 @@
+Backend
+
+
+Sistema de Reservas:
+
+Crear modelos y lógica para manejar las reservas, incluyendo guardar y recuperar reservas por fechas.
+
+
+Gestión de Mantenimiento:
+
+Programar tareas automáticas para el mantenimiento y bloquear las fechas de reserva durante el mantenimiento programado.
+Enviar notificaciones automáticas para mantenimientos próximos.
+Sistema de Pago:
+
+Integrar API de servicios de pago para procesar transacciones.
+Manejar la lógica para confirmar pagos y actualizar el estado de las reservas.
+Valoraciones y Comentarios:
+
+Crear un sistema para almacenar y recuperar valoraciones y comentarios de los usuarios.
+Ofertas y Promociones:
+
+Implementar lógica de negocio para aplicar descuentos y ofertas especiales.
+Gestión de Eventos Especiales:
+
+Desarrollar un módulo para la gestión de eventos, incluyendo la reserva de múltiples cabañas y servicios adicionales.
+Programa de Fidelidad:
+
+Crear un sistema para acumular y canjear puntos de fidelidad.
+Frontend
+Calendario de Disponibilidad:
+
+Implementar un componente de calendario interactivo para mostrar la disponibilidad.
+Crear filtros de búsqueda para diferentes características de las cabañas.
+Sistema de Reservas:
+
+Diseñar formularios para la búsqueda y reserva de cabañas.
+Mostrar servicios adicionales y permitir su selección durante el proceso de reserva.
+Panel de Control de Usuario:
+
+Diseñar una interfaz para que los usuarios vean y gestionen sus reservas, incluyendo cancelaciones y cambios.
+Valoraciones y Comentarios:
+
+Crear una sección para que los usuarios puedan dejar y ver comentarios y valoraciones.
+Ofertas y Promociones:
+
+Diseñar banners o secciones especiales para mostrar ofertas actuales.
+Gestión de Eventos Especiales:
+
+Crear páginas específicas para la organización de eventos con formularios personalizados para necesidades especiales.
+Integración de Mapas:
+
+Integrar mapas para mostrar la ubicación de las cabañas y puntos de interés cercanos.
+Programa de Fidelidad:
+
+Diseñar una interfaz donde los usuarios puedan ver su saldo de puntos y los beneficios del programa.

@@ -19,22 +19,29 @@ namespace Web_API
 
         internal static string CrearToken(Usuario usuarioActual, IConfiguration configuration)
         {
-            List<Claim> claims = new List<Claim>()
-            {
-                new Claim(ClaimTypes.Email, usuarioActual.Email),
-                new Claim(ClaimTypes.Role,"Operador")
+            List<Claim> claims = new List<Claim>
+    {
+        new Claim(ClaimTypes.Email, usuarioActual.Email),
+        new Claim(ClaimTypes.NameIdentifier, usuarioActual.id.ToString()), // Agregar el ID del usuario como un claim
+        new Claim(ClaimTypes.Role, "Operador") // Asegúrate de que este rol se asigna correctamente según la lógica de tu aplicación
+    };
 
-            };
             var claveSecreta = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(configuration.GetSection("AppSettings:SecretTokenKey").Value!));
-
             var credenciales = new SigningCredentials(claveSecreta, SecurityAlgorithms.HmacSha512Signature);
 
-            var token = new JwtSecurityToken(claims: claims ,expires: DateTime.Now.AddDays(1), signingCredentials: credenciales);
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(claims),
+                Expires = DateTime.UtcNow.AddDays(1), // Usar UTC para evitar problemas de zona horaria
+                SigningCredentials = credenciales
+            };
 
-            var jwt = new JwtSecurityTokenHandler().WriteToken(token);
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var token = tokenHandler.CreateToken(tokenDescriptor);
 
-            return jwt;
+            return tokenHandler.WriteToken(token);
         }
+
 
         internal static bool VerificarPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)
         {
