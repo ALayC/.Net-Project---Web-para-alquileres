@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Http;
 using System.Text;
 using Obligatorio_MVC.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using System.Security.Claims;
 
 namespace Obligatorio_MVC.Controllers
 {
@@ -21,6 +24,8 @@ namespace Obligatorio_MVC.Controllers
         {
             return View();
         }
+
+
         [AllowAnonymous]
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -34,21 +39,45 @@ namespace Obligatorio_MVC.Controllers
 
             try
             {
-                // Llamada al servicio para realizar el login y obtener el token
                 var token = await usuarioService.Login(model);
 
-                // Almacenar el token en la sesión
-                HttpContext.Session.SetString("AccessToken", token);
+                if (token != null)
+                {
+                    //almacena el token en la sesion
+                    HttpContext.Session.SetString("AccessToken", token);
+                    // Crear las claims (información del usuario)
+                    var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, model.Email),
+                new Claim("Token", token) // Almacena el token como una claim
+            };
 
-                // Redirigir a otra vista después del login exitoso
+                    // Crear la identidad del usuario
+                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                    // Crear el principal de usuario
+                    var principal = new ClaimsPrincipal(claimsIdentity);
+
+                    // Iniciar sesión con la autenticación basada en cookies
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+
+                    // Redirigir a la página de inicio
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ViewBag.Error = "Credenciales inválidas.";
+                    return View(model);
+                }
             }
             catch (Exception ex)
             {
                 ViewBag.Error = ex.Message;
                 return View(model);
             }
-            return RedirectToAction("Index", "Home");
         }
+
+
 
 
         [AllowAnonymous]

@@ -51,9 +51,16 @@ namespace Obligatorio_MVC.Controllers
         public async Task<IActionResult> ListarTipoCabana()
         {
             var token = HttpContext.Session.GetString("AccessToken");
+            if (token == null)
+            {
+                // Manejar la situación, por ejemplo, redirigir al usuario al login
+                return RedirectToAction("Login", "Usuario");
+            }
+
             IEnumerable<TipoCabanaModel> tipoCabanaModels = await tipoCabanaService.ListarTipoCabana(token);
             return View(tipoCabanaModels);
         }
+
 
         [Route("TIpoCabana/BuscarTipoPorNombre/{nombre}")]
         public async Task<IActionResult> BuscarTipoPorNombre(string nombre)
