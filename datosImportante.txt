@@ -1,0 +1,6 @@
+{
+  "email": "user@prueba24.com",
+  "password": "string"
+}
+
+--la sesion se hace basada en cookies

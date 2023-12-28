@@ -1,3 +1,10 @@
+C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\Web API.csproj.AssemblyReference.cache
+C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\Web API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\Web API.AssemblyInfoInputs.cache
+C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\Web API.AssemblyInfo.cs
+C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\Web API.csproj.CoreCompileInputs.cache
+C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\Web API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\Web API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\appsettings.json
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Web API.exe
@@ -7,7 +14,9 @@ C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Web API.dll
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Web API.pdb
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Elasticsearch.Net.dll
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Humanizer.dll
+C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
@@ -29,6 +38,10 @@ C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Microsoft.Open
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Nest.dll
+C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Scrutor.dll
+C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -56,16 +69,9 @@ C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\runtimes\win\l
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Obligatorio_AccesoDatos.dll
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Obligatorio_Aplicacion.dll
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Obligatorio_LogicaNegocio.dll
+C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Obligatorio_LogicaNegocio.pdb
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Obligatorio_AccesoDatos.pdb
 C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Obligatorio_Aplicacion.pdb
-C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Obligatorio_LogicaNegocio.pdb
-C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\Web API.csproj.AssemblyReference.cache
-C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\Web API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\Web API.AssemblyInfoInputs.cache
-C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\Web API.AssemblyInfo.cs
-C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\Web API.csproj.CoreCompileInputs.cache
-C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\Web API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\Web API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\staticwebassets\msbuild.Web API.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\staticwebassets\msbuild.build.Web API.props
 C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Web API.props
@@ -80,9 +86,3 @@ C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\refint\Web API
 C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\Web API.pdb
 C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\Web API.genruntimeconfig.cache
 C:\Users\alay\source\repos\ObligatorioP3\Web API\obj\Debug\net7.0\ref\Web API.dll
-C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Elasticsearch.Net.dll
-C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Nest.dll
-C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Scrutor.dll
-C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Swashbuckle.AspNetCore.Filters.dll
-C:\Users\alay\source\repos\ObligatorioP3\Web API\bin\Debug\net7.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll

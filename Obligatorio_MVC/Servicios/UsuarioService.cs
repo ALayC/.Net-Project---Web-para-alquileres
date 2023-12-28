@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Obligatorio_MVC.Models;
+using System.Text;
 
 namespace Obligatorio_MVC.Servicios
 {
@@ -37,12 +38,24 @@ namespace Obligatorio_MVC.Servicios
             using (var cliente = new HttpClient())
             {
                 string cuerpoSolicitud = Newtonsoft.Json.JsonConvert.SerializeObject(usuario);
-                HttpContent contenido = new StringContent(cuerpoSolicitud, new System.Net.Http.Headers.MediaTypeHeaderValue("application/json"));
+                HttpContent contenido = new StringContent(cuerpoSolicitud, Encoding.UTF8, "application/json");
+
+                // Realiza la petición a la API para autenticar al usuario
                 var respuesta = await cliente.PostAsync($"{usuarioBaseUrl}/api/Seguridad/login", contenido);
-                if (!respuesta.IsSuccessStatusCode) throw new Exception("No se pudo hacer el login.");
-                return await respuesta.Content.ReadAsStringAsync();
+
+                // Verifica si la respuesta es exitosa
+                if (!respuesta.IsSuccessStatusCode)
+                {
+                    throw new Exception("No se pudo hacer el login.");
+                }
+
+                // Obtiene el token de la respuesta
+                var token = await respuesta.Content.ReadAsStringAsync();
+
+                return token;
             }
         }
+
 
 
         public async Task Registrar(UsuarioViewModel usuario)

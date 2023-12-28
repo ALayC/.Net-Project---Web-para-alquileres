@@ -1,11 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Obligatorio_MVC.Models;
 using System.Diagnostics;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
 
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace Obligatorio_MVC.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -30,7 +35,7 @@ namespace Obligatorio_MVC.Controllers
         //private readonly ICabanaService cabanaService;
 
 
-
+        //[AllowAnonymous]
         public IActionResult Index()
         {
             //string sesionUsuarioEmail = HttpContext.Session.GetString("SesionUsuario");
@@ -58,39 +63,84 @@ namespace Obligatorio_MVC.Controllers
         //    return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         //}
 
-
-        public IActionResult Login()
+        [AllowAnonymous] // Esta acción es accesible sin iniciar sesión
+        public IActionResult Login(string returnUrl = null)
         {
-
+            ViewData["ReturnUrl"] = returnUrl;
             return View();
         }
 
 
+        //[AllowAnonymous]
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+
+        //public async Task<IActionResult> Login(UsuarioViewModel model)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        ViewBag.Error = "Datos de usario no validos";
+        //        return View(model);
+        //    }
+        //    try
+        //    {
+        //        var token = await usuarioService.Login(model);
+        //        HttpContext.Session.SetString("AccessToken", token);
+        //        return RedirectToAction("Index", "Home");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        ViewBag.Error = ex.Message;
+        //        return View(model);
+        //    }
+        //}
+
+
+        // ... dentro de la clase UsuarioController ...
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-
-        public async Task<IActionResult> Login(UsuarioViewModel model)
+    [AllowAnonymous]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Login(UsuarioViewModel model)
+    {
+        if (!ModelState.IsValid)
         {
-            if (!ModelState.IsValid)
-            {
-                ViewBag.Error = "Datos de usario no validos";
-                return View(model);
-            }
-            try
-            {
-                var token = await usuarioService.Login(model);
-                HttpContext.Session.SetString("AccessToken", token);
-                return RedirectToAction("Index", "Home");//chequear HomeController
-            }
-            catch (Exception ex)
-            {
-                ViewBag.Error = ex.Message;
-                return View(model);
-            }
+            ViewBag.Error = "Los datos de Usuario no son válidos.";
+            return View(model);
         }
+        try
+        {
+            var token = await usuarioService.Login(model);
+            if (token != null)
+            {
+                var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, model.Email),
+                new Claim("Token", token) // Guarda el token en la identidad del usuario
+            };
 
-        public IActionResult Registrar()
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                await HttpContext.SignInAsync(
+                    CookieAuthenticationDefaults.AuthenticationScheme,
+                    new ClaimsPrincipal(claimsIdentity));
+
+                return RedirectToAction("Index", "Home"); // Asegúrate de que el controlador y la acción sean correctos
+            }
+
+            ViewBag.Error = "La autenticación ha fallado.";
+            return View(model);
+        }
+        catch (Exception ex)
+        {
+            ViewBag.Error = ex.Message;
+            return View(model);
+        }
+    }
+
+
+
+    public IActionResult Registrar()
         {
 
             return View();
@@ -120,7 +170,7 @@ namespace Obligatorio_MVC.Controllers
         }
 
         //[HttpPost]
-        //public IActionResult Logout()
+        //public async Task<IActionResult> Logout(UsuarioViewModel model)
         //{
         //    string sesionUsuarioEmail = HttpContext.Session.GetString("SesionUsuario");
         //    if (sesionUsuarioEmail != null)
@@ -137,6 +187,20 @@ namespace Obligatorio_MVC.Controllers
         //    }
         //    return RedirectToAction("login", "Usuario");
         //}
+
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            // Limpiamos la sesión del usuario.
+            HttpContext.Session.Remove("AccessToken");
+
+            // Cerramos la sesión de autenticación basada en cookies.
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            // Redirigimos al usuario a la acción de Login.
+            return RedirectToAction("Index", "Home");
+        }
 
 
 

@@ -5,9 +5,11 @@ using Obligatorio_MVC.Servicios;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Obligatorio_MVC.Controllers
 {
+    [Authorize]
     public class MantenimientoController : Controller
     {
         private readonly IMantenimientoService mantenimientoService;

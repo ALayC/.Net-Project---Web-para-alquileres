@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Net.Http.Headers;
 using Obligatorio_MVC.Models;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Obligatorio_MVC.Controllers
 {
+    [Authorize]
 
     public class CabanaController : Controller
     {
