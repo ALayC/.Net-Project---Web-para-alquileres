@@ -12,13 +12,18 @@ namespace Obligatorio_LogicaNegocio.Entidades
     public class TipoCabana
     {
         [Key]
-        public string Nombre { get; set; }
-        public string Descripcion { get; set; }
-        public decimal CostoPorHuesped { get; set; }
-
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int IdTipoCabana { get; set; }
+        public int IdTipoCabana { get; set; } // Clave primaria numérica
 
+        [Required]
+        [StringLength(100)]
+        public string Nombre { get; set; } // 'Nombre' ahora es una propiedad regular
+
+        [Required]
+        [StringLength(500, MinimumLength = 10)]
+        public string Descripcion { get; set; }
+
+        public decimal CostoPorHuesped { get; set; }
         public bool Validar()
         {
             return ValidarNombre() && ValidarDescripcion();

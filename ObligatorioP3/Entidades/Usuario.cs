@@ -10,70 +10,15 @@ namespace Obligatorio_LogicaNegocio.Entidades
 {
     public class Usuario
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public string Email { get; set; }
-        //public string Password { get; set; }
+        public int id { get; set; }  // Usar 'id' como clave primaria
+
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }  // Mantener 'Email' como un campo único
 
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
-
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int id { get; set; }
-
-        //public bool Validar()
-        //{
-        //    return ValidarMail() && ValidarPassword();
-        //}
-        //private bool ValidarMail()
-        //{
-        //    try
-        //    {
-        //        var mailAddress = new System.Net.Mail.MailAddress(Email);
-        //        return true;
-        //    }
-        //    catch (FormatException)
-        //    {
-        //        return false;
-        //    }
-        //}
-
-        //private bool ValidarPassword()
-        //{
-
-        //    if (Password.Length < 6)
-        //    {
-        //        return false;
-        //    }
-
-        //    bool hasUpperCase = false;
-        //    bool hasLowerCase = false;
-        //    bool hasDigit = false;
-
-        //    foreach (char c in Password)
-        //    {
-        //        if (char.IsUpper(c))
-        //        {
-        //            hasUpperCase = true;
-        //        }
-        //        else if (char.IsLower(c))
-        //        {
-        //            hasLowerCase = true;
-        //        }
-        //        else if (char.IsDigit(c))
-        //        {
-        //            hasDigit = true;
-        //        }
-        //    }
-
-        //    if (!hasUpperCase || !hasLowerCase || !hasDigit)
-        //    {
-        //        return false;
-        //    }
-
-        //    return true;
-        //}
-        
-
-
     }
 }
