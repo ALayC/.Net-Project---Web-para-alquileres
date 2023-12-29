@@ -1,10 +1,5 @@
-﻿using Obligatorio_Aplicacion.InterfacesCasoUso;
+﻿using Obligatorio_Aplicacion.Servicios;
 using Obligatorio_LogicaNegocio.Entidades;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Obligatorio_AccesoDatos.EntityFramework
 {
@@ -47,6 +42,22 @@ namespace Obligatorio_AccesoDatos.EntityFramework
         public List<Reserva> ObtenerTodos()
         {
             throw new NotImplementedException();
+        }
+
+        public bool VerificarDisponibilidad(int cabanaId, DateTime fechaInicio, DateTime fechaFin)
+        {
+            // Verificar que no existan reservas que se solapen con las fechas proporcionadas.
+            // Una reserva se solapa si comienza antes de que termine el rango de fechas proporcionado
+            // y termina después de que comienza el rango de fechas proporcionado.
+
+            bool existeReservaSolapada = _dbContext.Reservas.Any(reserva =>
+                reserva.CabanaId == cabanaId &&
+                reserva.FechaFin > fechaInicio &&
+                reserva.FechaInicio < fechaFin);
+
+            // Si existeReservaSolapada es verdadero, entonces la cabaña NO está disponible.
+            // Por lo tanto, devolvemos el inverso del valor.
+            return !existeReservaSolapada;
         }
     }
 }

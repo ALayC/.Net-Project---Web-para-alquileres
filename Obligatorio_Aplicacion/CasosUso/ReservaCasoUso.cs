@@ -9,50 +9,37 @@ using System.Threading.Tasks;
 
 namespace Obligatorio_Aplicacion.CasosUso
 {
-    public class ReservaCasoUso : IReserva
+    // Obligatorio_Aplicacion.CasosUso
+    public class ReservaCasoUso
     {
-        IReserva _reservaRepositorio;
-        // Inyectar otros servicios si es necesario, por ejemplo, para verificar la disponibilidad.
+        private readonly IReservaRepositorio _reservaRepositorio;
+        // Aquí puedes inyectar otros servicios necesarios.
 
-        public ReservaCasoUso(IReserva reservaRepositorio)
+        public ReservaCasoUso(IReservaRepositorio reservaRepositorio)
         {
             _reservaRepositorio = reservaRepositorio;
         }
 
-        public void Actualizar(Reserva entidad)
+        public void RealizarReserva(Reserva datos)
         {
-            throw new NotImplementedException();
-        }
+            if (datos == null)
+            {
+                throw new ArgumentNullException(nameof(datos), "Los datos de la reserva no pueden ser nulos.");
+            }
 
-        public void Agregar(Reserva entidad)
-        {
-            throw new NotImplementedException();
-        }
+            // Verificar la disponibilidad de la cabaña para las fechas solicitadas.
+            if (!_reservaRepositorio.VerificarDisponibilidad(datos.CabanaId, datos.FechaInicio, datos.FechaFin))
+            {
+                throw new InvalidOperationException("La cabaña no está disponible para las fechas seleccionadas.");
+            }
 
-        public void Eliminar(int id)
-        {
-            throw new NotImplementedException();
-        }
+            // Aquí puedes agregar lógica adicional para calcular el costo total, aplicar descuentos, etc.
 
-        public Reserva? ObtenerPorId(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Reserva> ObtenerTodos()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RealizarReserva( datos)
-        {
-            // Validar los datos de la reserva.
-            // Verificar la disponibilidad de la cabaña.
-            // Crear y configurar la entidad Reserva.
-            // Utilizar _reservaRepositorio para agregar la reserva a la base de datos.
+            // Agregar la reserva a la base de datos.
+            _reservaRepositorio.Agregar(datos);
         }
     }
+
 }
 
 
-}
