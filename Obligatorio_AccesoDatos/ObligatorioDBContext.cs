@@ -11,6 +11,7 @@ namespace Obligatorio_AccesoDatos
         public DbSet<Mantenimiento> Mantenimientos { get; set; }
         public DbSet<TipoCabana> TipoCabanas { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Reserva> Reservas { get; set; }
 
 
         //public ObligatorioDBContext(DbContextOptions<ObligatorioDBContext> optionsBuilder) : base(optionsBuilder)

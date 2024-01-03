@@ -24,9 +24,11 @@ namespace Obligatorio_AccesoDatos.Migrations
 
             modelBuilder.Entity("Obligatorio_LogicaNegocio.Entidades.Cabana", b =>
                 {
-                    b.Property<string>("Nombre")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                    b.Property<int>("CabanaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CabanaId"));
 
                     b.Property<int>("CapacidadMaxima")
                         .HasColumnType("int");
@@ -46,16 +48,20 @@ namespace Obligatorio_AccesoDatos.Migrations
                     b.Property<bool>("JacuzziPrivado")
                         .HasColumnType("bit");
 
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<int>("NumeroHabitacion")
                         .HasColumnType("int");
 
-                    b.Property<string>("TipoCabanaNombre")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("TipoCabanaId")
+                        .HasColumnType("int");
 
-                    b.HasKey("Nombre");
+                    b.HasKey("CabanaId");
 
-                    b.HasIndex("TipoCabanaNombre");
+                    b.HasIndex("TipoCabanaId");
 
                     b.ToTable("Cabanas");
                 });
@@ -65,8 +71,8 @@ namespace Obligatorio_AccesoDatos.Migrations
                     b.Property<string>("Descripcion")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("CabanaNombre")
-                        .HasColumnType("nvarchar(100)");
+                    b.Property<int?>("CabanaId")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("Costo")
                         .HasColumnType("decimal(18,2)");
@@ -83,38 +89,83 @@ namespace Obligatorio_AccesoDatos.Migrations
 
                     b.HasKey("Descripcion");
 
-                    b.HasIndex("CabanaNombre");
+                    b.HasIndex("CabanaId");
 
                     b.ToTable("Mantenimientos");
                 });
 
-            modelBuilder.Entity("Obligatorio_LogicaNegocio.Entidades.TipoCabana", b =>
+            modelBuilder.Entity("Obligatorio_LogicaNegocio.Entidades.Reserva", b =>
                 {
-                    b.Property<string>("Nombre")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("ReservaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.Property<decimal>("CostoPorHuesped")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReservaId"));
+
+                    b.Property<int>("CabanaId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("FechaFin")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("FechaInicio")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("NumeroHuespedes")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("PorcentajeDescuento")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("Descripcion")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("UsuarioId")
+                        .HasColumnType("int");
 
+                    b.HasKey("ReservaId");
+
+                    b.HasIndex("CabanaId");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.ToTable("Reservas");
+                });
+
+            modelBuilder.Entity("Obligatorio_LogicaNegocio.Entidades.TipoCabana", b =>
+                {
                     b.Property<int>("IdTipoCabana")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdTipoCabana"));
 
-                    b.HasKey("Nombre");
+                    b.Property<decimal>("CostoPorHuesped")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("IdTipoCabana");
 
                     b.ToTable("TipoCabanas");
                 });
 
             modelBuilder.Entity("Obligatorio_LogicaNegocio.Entidades.Usuario", b =>
                 {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(450)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<byte[]>("PasswordHash")
                         .IsRequired()
@@ -124,13 +175,7 @@ namespace Obligatorio_AccesoDatos.Migrations
                         .IsRequired()
                         .HasColumnType("varbinary(max)");
 
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
-
-                    b.HasKey("Email");
+                    b.HasKey("id");
 
                     b.ToTable("Usuarios");
                 });
@@ -139,7 +184,7 @@ namespace Obligatorio_AccesoDatos.Migrations
                 {
                     b.HasOne("Obligatorio_LogicaNegocio.Entidades.TipoCabana", "TipoCabana")
                         .WithMany()
-                        .HasForeignKey("TipoCabanaNombre")
+                        .HasForeignKey("TipoCabanaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -150,7 +195,26 @@ namespace Obligatorio_AccesoDatos.Migrations
                 {
                     b.HasOne("Obligatorio_LogicaNegocio.Entidades.Cabana", null)
                         .WithMany("Mantenimientos")
-                        .HasForeignKey("CabanaNombre");
+                        .HasForeignKey("CabanaId");
+                });
+
+            modelBuilder.Entity("Obligatorio_LogicaNegocio.Entidades.Reserva", b =>
+                {
+                    b.HasOne("Obligatorio_LogicaNegocio.Entidades.Cabana", "Cabana")
+                        .WithMany()
+                        .HasForeignKey("CabanaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Obligatorio_LogicaNegocio.Entidades.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cabana");
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("Obligatorio_LogicaNegocio.Entidades.Cabana", b =>
